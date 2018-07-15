@@ -1,5 +1,6 @@
 ARG ODOO_VERSION=latest
 FROM elicocorp/odoo:$ODOO_VERSION
+MAINTAINER Dmytro Katyukha <dmytro.katyukha@gmail.com>
 
 # Install postgresql
 RUN apt-get update -qq && \
