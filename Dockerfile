@@ -17,3 +17,5 @@ COPY ./sources/startup.sh /opt/scripts/startup.sh
 ENV ODOO_DB_HOST="localhost" \
     ODOO_DB_USER="odoo" \
     ODOO_DB_PASSWORD="odoo"
+
+CMD ["start"]

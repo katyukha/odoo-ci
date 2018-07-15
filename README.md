@@ -3,6 +3,8 @@
 Simplified Odoo docker image to be used in Continious Integration
 with postgres installed in same container as Odoo.
 
+The canonical source of this project is hosted on [GitLab](https://gitlab.com/katyukha/odoo-ci).
+
 This image is based on [elicocorp/odoo](https://hub.docker.com/r/elicocorp/odoo/) image
 (Thanks to [Elico Corporation](https://github.com/Elico-Corp) for high quality base image)
 
