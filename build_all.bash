@@ -1,0 +1,10 @@
+#!/bin/bash
+SCRIPT_DIR=$(dirname $(readlink -f $0));
+
+# Build images
+$SCRIPT_DIR/build.bash 7.0
+$SCRIPT_DIR/build.bash 8.0
+$SCRIPT_DIR/build.bash 9.0
+$SCRIPT_DIR/build.bash 10.0
+$SCRIPT_DIR/build.bash 11.0
+
