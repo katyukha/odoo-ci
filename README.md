@@ -16,3 +16,4 @@ Available tags:
 - 9.0: `docker pull registry.gitlab.com/katyukha/odoo-ci:9.0`
 - 10.0: `docker pull registry.gitlab.com/katyukha/odoo-ci:10.0`
 - 11.0: `docker pull registry.gitlab.com/katyukha/odoo-ci:11.0`
+- 12.0: `docker pull registry.gitlab.com/katyukha/odoo-ci:12.0`

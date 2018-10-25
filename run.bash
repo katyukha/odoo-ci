@@ -1,7 +1,7 @@
 #!/bin/bash
 ODOO_VERSION="11.0";
 case $1 in
-    latest|7.0|8.0|9.0|10.0|11.0)
+    latest|7.0|8.0|9.0|10.0|11.0|12.0)
         ODOO_VERSION="$1";
         shift;
     ;;
