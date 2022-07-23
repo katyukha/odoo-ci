@@ -3,7 +3,7 @@ image: docker:stable
 services:
     - docker:dind
 
-job:
+.build-image:definition: &build-image-definition
     tags:
         - docker
     before_script:
@@ -11,6 +11,60 @@ job:
         - apk update
         - apk add bash
     script:
-        - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
-        - bash build_all.bash
-        - bash push_all.bash
+        - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" "$CI_REGISTRY"
+        - bash build.bash "$ODOO_VERSION"
+        - bash push.bash "$ODOO_VERSION"
+        - docker logout "$CI_REGISTRY"
+
+build-image:7.0:
+    <<: *build-image-definition
+    variables:
+        ODOO_VERSION: "7.0"
+
+
+build-image:8.0:
+    <<: *build-image-definition
+    variables:
+        ODOO_VERSION: "8.0"
+
+
+build-image:9.0:
+    <<: *build-image-definition
+    variables:
+        ODOO_VERSION: "9.0"
+
+
+build-image:10.0:
+    <<: *build-image-definition
+    variables:
+        ODOO_VERSION: "10.0"
+
+
+build-image:11.0:
+    <<: *build-image-definition
+    variables:
+        ODOO_VERSION: "11.0"
+
+
+build-image:12.0:
+    <<: *build-image-definition
+    variables:
+        ODOO_VERSION: "12.0"
+
+
+build-image:13.0:
+    <<: *build-image-definition
+    variables:
+        ODOO_VERSION: "13.0"
+
+
+build-image:14.0:
+    <<: *build-image-definition
+    variables:
+        ODOO_VERSION: "14.0"
+
+
+build-image:15.0:
+    <<: *build-image-definition
+    variables:
+        ODOO_VERSION: "15.0"
